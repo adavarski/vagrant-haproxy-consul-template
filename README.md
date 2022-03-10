@@ -72,8 +72,8 @@ Following list depicts detailed environment configurations for each VM:
 
 After vagrant machines are running, you can connect instances to:
 
--Consul WEB UI: 192.168.100.11:8500
--Web Load Balancing Machine: 192.168.100.20
+- Consul WEB UI: 192.168.100.11:8500
+- Web Load Balancing Machine: 192.168.100.20
 
 If having the error message 'The guest additions on this VM do not match the install version of VirtualBox!', then run following command before vagrant up
 ```
