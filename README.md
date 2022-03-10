@@ -1,10 +1,10 @@
 
-## Vagrant: HAProxy + Consul + Consul Template (scalable web application example)
+## Vagrant: HAProxy + Consul + Consul Template (scalable application example)
 
-- Vagrant for launching multiple VM instances and persistent storage
+- Vagrant for launching multiple VM instances and persistent storage (Note: we can use Proxmox/VMWare VMs instead)
 - Consul for health checking and service discovery
 - Consul Template for automated load balancer management
-- HAProxy for  HTTP server load balancing (or TCP : MySQL/etc. service LB)
+- HAProxy for HTTP server load balancing (or other services: HTTP/TCP mode)
 
 ![picture](pictures/vagrant_consul_architecture_diagram.png)
 
@@ -14,8 +14,8 @@
 
 ### Usage
 ```
- $ vagrant up
- $ vagrant status
+$ vagrant up
+$ vagrant status
 Current machine states:
 
 consulserver1.local       running (virtualbox)
@@ -70,11 +70,10 @@ Following list depicts detailed environment configurations for each VM:
         * Same as Web server 1
         * Commented to not launch in initial checkout
 
-
 After vagrant machines are running, you can connect instances to:
 
-Consul WEB UI: 192.168.100.11:8500
-Web Load Balancing Machine: 192.168.100.20
+-Consul WEB UI: 192.168.100.11:8500
+-Web Load Balancing Machine: 192.168.100.20
 
 If having the error message 'The guest additions on this VM do not match the install version of VirtualBox!', then run following command before vagrant up
 ```
