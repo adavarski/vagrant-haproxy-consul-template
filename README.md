@@ -1,10 +1,10 @@
 
 ## Vagrant: HAProxy + Consul + Consul Template (scalable application example)
 
-- Vagrant for launching multiple VM instances and persistent storage (Note: we can use Proxmox/VMWare VMs instead)
+- Vagrant+Virtualbox for launching multiple VM instances and persistent storage (Note: we can use Proxmox/VMWare VMs instead)
 - Consul for health checking and service discovery
 - Consul Template for automated load balancer management
-- HAProxy for HTTP server load balancing (or other services: HTTP/TCP mode)
+- HAProxy for HTTP servers load balancing (or other TCP/HTTP services load balancing -> HAProxy: HTTP/TCP mode)
 
 ![picture](pictures/vagrant_consul_architecture_diagram.png)
 
@@ -58,12 +58,12 @@ Following list depicts detailed environment configurations for each VM:
         * Private IP: 192.168.100.31
         * Hostname: web1.local
         * Configured with Apache web server
-        * When the instance is launched, then Consul Template in Web server load balancer will generate new nginx config file.
+        * When the instance is launched, then Consul Template in Web server load balancer will generate new HAProxy config file.
     * Web server 2
         * Private IP: 192.168.100.32
         * Hostname: web2.local
         * Same as Web server 1
-        * Commented to not launch in initial checkout
+        * When the instance is launched, then Consul Template in Web server load balancer will generate new HAProxy config file.
     * Web server 3
         * Private IP: 192.168.100.33
         * Hostname: web3.local
@@ -90,7 +90,7 @@ Once all vagrant instances up, you can access Consul Web UI by opening browser h
 ![picture](pictures/consul-services.png)
 ![picture](pictures/consul-nodes.png)
 
-HAProxy: Open browser and access to http://192.168.100.20.
+HAProxy: http://192.168.100.20.
 
 ![picture](pictures/haproxy-stats.png)
 
