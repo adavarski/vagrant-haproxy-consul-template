@@ -90,7 +90,7 @@ Once all vagrant instances up, you can access Consul Web UI by opening browser h
 ![picture](pictures/consul-services.png)
 ![picture](pictures/consul-nodes.png)
 
-HAProxy: http://192.168.100.20.
+HAProxy: http://192.168.100.20/haproxy?stats
 
 ![picture](pictures/haproxy-stats.png)
 
