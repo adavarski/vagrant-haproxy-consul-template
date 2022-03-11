@@ -84,7 +84,7 @@ You can access Consul Web UI by opening browser http://192.168.100.11:8500. Then
 ![picture](pictures/consul-services.png)
 ![picture](pictures/consul-nodes.png)
 
-HAProxy: http://192.168.100.20/haproxy?stats
+HAProxy UI(stats): http://192.168.100.20/haproxy?stats
 
 ![picture](pictures/haproxy-stats.png)
 
