@@ -4,7 +4,7 @@
 - Vagrant+Virtualbox for launching multiple VM instances and persistent storage (Note: We can use Proxmox/VMWare/etc. VMs instead -> provisioned by terraform and using ansible for CM)
 - Consul for health checking and service discovery
 - Consul Template for automated load balancer management
-- HAProxy for HTTP servers load balancing (or other TCP/HTTP services load balancing -> HAProxy: HTTP/TCP mode)
+- HAProxy for apache HTTP servers load balancing (or other TCP/HTTP services load balancing -> HAProxy: HTTP/TCP mode)
 
 ![picture](pictures/vagrant_consul_architecture_diagram.png)
 
